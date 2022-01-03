@@ -1,0 +1,21 @@
+package top;
+
+import java.util.Arrays;
+
+public class top416 {
+	boolean find=false;
+	public boolean canPartition(int[] nums) {
+		int n=nums.length;
+		if(n<2)return false;
+		int sum=0,max=0;
+		for(int num:nums) {
+			sum+=num;
+			max=Math.max(num, max);
+		}
+		int target=sum/2;
+		if(sum%2==1||max>target)return false;
+		int[][]dp=new int[n][target+1];
+		
+    }
+	
+}

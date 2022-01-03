@@ -1,0 +1,11 @@
+package top;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class top494 {
+	public int findTargetSumWays(int[] nums, int target) {
+		Map<Integer,Integer>m=new HashMap();
+		
+    }
+}

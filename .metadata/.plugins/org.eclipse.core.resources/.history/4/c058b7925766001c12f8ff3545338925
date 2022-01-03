@@ -1,0 +1,27 @@
+package top;
+
+import java.util.Arrays;
+
+public class top416 {
+	boolean find=false;
+	public boolean canPartition(int[] nums) {
+		int sum=0;
+		for(int num:nums) {
+			sum+=num;
+		}
+		if(sum%2==1)return false;
+		int target=sum/2;
+		Arrays.sort(nums);
+		return find(nums,target,0,nums.length-1);
+    }
+	public boolean find(int[] nums,int target,int start,int end) {
+		if(start==end) {
+			if(nums[start]==target)return true;
+			else return false;
+		}
+		if(nums[start]>target)return false;
+		else if(nums[end]>target)return find(nums,target,start,end-1);
+		else if(nums[end]==target)return true;
+		else return find(nums,target-nums[end],start,end-1)||find(nums,target,start,end-1);
+	}
+}

@@ -1,0 +1,14 @@
+package top;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class top438 {
+	public List<Integer> findAnagrams(String s, String p) {
+		List<Integer>result=new ArrayList<>();
+		int [] pcount=new int[26];
+		for(int i=0;i<p.length();i++){
+			pcount[p.charAt(i)-'a']++;
+		}
+    }
+}

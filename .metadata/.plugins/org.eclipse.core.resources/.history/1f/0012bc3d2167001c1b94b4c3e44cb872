@@ -1,0 +1,19 @@
+package top;
+
+import top.top124.TreeNode;
+
+public class top437 {
+	int count=0;
+	public int pathSum(TreeNode root, int targetSum) {
+		if(root==null)return 0;
+		count=0;
+		dfs(root,targetSum);
+    }
+	public void dfs(TreeNode root, int targetSum) {
+		if(root==null)return;
+		int val=root.val;
+		if(val==targetSum)count++;
+		dfs(root.left,targetSum-val);
+		dfs(root.right,targetSum-val);
+	}
+}

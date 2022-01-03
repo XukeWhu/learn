@@ -1,0 +1,21 @@
+package top;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class top494 {
+	public int findTargetSumWays(int[] nums, int target) {
+		if(nums.length==0)return 0;
+		Map<Integer,Integer>m=new HashMap();
+		m.put(nums[0], 1);
+		if(nums[0]!=0)m.put(-nums[0],1);
+		for(int i=1;i<nums.length;i++) {
+			Map<Integer,Integer>temp=new HashMap();
+			int num=nums[i];
+			for(Map.Entry<Integer, Integer>map:m) {
+				int key=map.getKey()+num;
+				temp.put(key, map.getValue()+temp.getOrDefault(key, 0));
+			}
+		}
+    }
+}

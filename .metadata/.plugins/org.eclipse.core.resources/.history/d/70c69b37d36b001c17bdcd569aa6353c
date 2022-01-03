@@ -1,0 +1,15 @@
+package top;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class top494 {
+	int count=0;
+	public int findTargetSumWays(int[] nums, int target) {
+		findnext(nums,target,0,0);
+		return count;
+    }
+	public void findnext(int[] nums, int target,int index,int sum) {
+		
+	}
+}
