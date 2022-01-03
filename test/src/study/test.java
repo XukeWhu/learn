@@ -18,6 +18,7 @@ public class test implements InvocationHandler {
     public Object invoke(Object proxy, Method method, Object[] args) throws InvocationTargetException, IllegalAccessException {
         System.out.println("before method " + method.getName());
         Object result = method.invoke(target, args);
+//1
         System.out.println("after method " + method.getName());
         return result;
     }
